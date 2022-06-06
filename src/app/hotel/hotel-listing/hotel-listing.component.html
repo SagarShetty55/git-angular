@@ -1,0 +1,19 @@
+<div class="header">
+  <h1>New Hotel Booking Website.com</h1>
+  <h3>Hotel Lists</h3>
+</div>
+<div class="container">
+  <div class="row" infiniteScroll [infiniteScrollDistance]="0.5" (scrolled)="onScroll($event)">
+    <!-- <div class="col-lg-4" *ngFor='let item of hotelList| filter:filteredString;trackBy:trackByHotelId' style="margin-top: 50px;"> -->
+    <div class="col-lg-4" *ngFor='let item of hotelList;trackBy:trackByHotelId'  style="margin-top: 50px;" (click)="viewHotelDetails(item.hotelId)">
+     <div style="border: 5px solid rgb(211, 216, 211);">   
+       <img src="{{item.image}}" alt="hotel">
+       <h5 style="color:black;">{{item.hotelName}}</h5>
+     </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <button (click)="nextPage()">Next</button>
+</div> -->

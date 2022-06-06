@@ -1,0 +1,14 @@
+/* Header/Logo Title */
+.header {
+  padding: 8px;
+  text-align: left;
+  background: #150469;
+  color: white;
+  font-size: 10px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+ 

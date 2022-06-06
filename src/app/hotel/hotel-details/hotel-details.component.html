@@ -1,0 +1,23 @@
+<div class="header">
+    <h1>New Hotel Booking Website.com</h1>
+    <h3>Hotel details</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h1 style="color:black;font-size: 80px">{{hotelDetails.hotelName}}</h1>
+        <!-- <div class="col-lg-4" *ngFor='let item of hotelList| filter:filteredString;trackBy:trackByHotelId' style="margin-top: 50px;"> -->
+        <div class="col-lg-2" style="width: 500px;height: 300px;" *ngFor='let item of hotelDetails.image'>
+            <div style="border: 5px solid rgb(211, 216, 211);">
+                <img src="{{item}}" alt="hotel">
+            </div>
+        </div>
+    </div>
+    <h1 style="margin-top: 50px;font-size: 60px">Available Facilities:</h1>
+    <div style="display:inline-block;margin-top: 5px;" *ngFor='let item of hotelDetails.availableFacilities'>
+        <h3>{{item}},</h3>
+    </div>
+    <div>
+        <button style="background-color: rgb(18, 18, 99);color: white;font-size: 50px;padding: 12px 28px;">Book</button>
+    </div>
+</div>

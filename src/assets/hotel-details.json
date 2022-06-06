@@ -1,0 +1,44 @@
+{
+    "data": [
+      {
+        "image":["https://cf.bstatic.com/xdata/images/hotel/max1024x768/157228528.jpg?k=c11c9a842ecfecfa7d898680ee98e4064a349e9c462be3fc84f40577c6fb852a&o=&hp=1","https://cf.bstatic.com/xdata/images/hotel/max1024x768/157228524.jpg?k=8ed1383dbf802e634e17cf40ffd8720c4917de7ae896cc35176da1b436046966&o=&hp=1","https://cf.bstatic.com/xdata/images/hotel/max1024x768/205764578.jpg?k=87d8c330e0493543cad56b4d53c4a6d73be2529d50139677ee29723276aaa227&o=&hp=1"
+        ],
+        "hotelName" : "Hotel Dhruv",
+        "hotelId": 1,
+        "availableFacilities": ["Gym", "Wifi","Swimming Pool","Free Parking"],
+
+        "ratings": 5,
+        "location": "No. 1, Palace Road, 560001 Bangalore, India"
+      },
+      {
+        "image": ["https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-bengaluru/gallery/featured/bengaluru-gallery-featured-3-swimming-pool-724x407.jpg"],
+        "hotelName" : "Hotel Taj",
+        "hotelId": 2,
+        "availableFacilities": [
+          {"name":"Wifi","icon":"fas fa-swimmer"},
+          {"name":"Swimming Pool","icon":"fas fa-swimmer"},
+          {"name":"Restaurant","icon":"fas fa-swimmer"},
+          {"name":"Gym","icon":"fas fa-swimmer"},
+          {"name":"Free Parking","icon":"fas fa-swimmer"}
+        ],
+        "ratings": 5,
+        "location": "No. 1, Palace Road, 560001 Bangalore, India"   
+      },
+      {
+        "image": ["https://cdn2.hubspot.net/hubfs/439788/Blog/Featured%20Images/Best%20Hotel%20Website%20Designs.jpg"],
+        "hotelName" : "Hotel Maurya",
+        "hotelId": 3,
+        "availableFacilities": ["Gym", "Wifi","Swimming Pool","Free Parking"],
+        "ratings": 5,
+        "location": "No. 1, Palace Road, 560001 Bangalore, India"
+      },
+      {
+        "image": ["https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWx8ZW58MHx8MHx8&w=1000&q=80"],
+        "hotelName" : "Hotel Abhay",
+        "hotelId": 4,
+        "availableFacilities": ["Gym", "Wifi","Swimming Pool","Free Parking"],
+        "ratings": 5,
+        "location": "No. 1, Palace Road, 560001 Bangalore, India"
+      }
+    ]
+  }

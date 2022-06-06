@@ -1,0 +1,9 @@
+<div class="container col-lg-4">
+  <div class="class-body">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <input class="form-control" type="text" name="search" autocomplete="off" formControlName="searchText"
+        placeholder="&#61442;  Type to search">
+      <button [disabled]="searchForm.invalid">Search</button>
+    </form>
+  </div>
+</div>

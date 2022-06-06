@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVsfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+      "hotelName" : "Hotel Dhruv",
+      "hotelId": 1
+    },
+    {
+      "image": "https://cdn2.hubspot.net/hubfs/439788/Blog/Featured%20Images/Best%20Hotel%20Website%20Designs.jpg",
+      "hotelName" : "Hotel Maurya",
+      "hotelId": 3
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWx8ZW58MHx8MHx8&w=1000&q=80",
+      "hotelName" : "Hotel Abhay",
+      "hotelId": 4
+    },
+    {
+      "image": "https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-bengaluru/gallery/featured/bengaluru-gallery-featured-3-swimming-pool-724x407.jpg",
+      "hotelName" : "Hotel Taj",
+      "hotelId": 2   
+    }
+  ]
+}
