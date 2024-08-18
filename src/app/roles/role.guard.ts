@@ -17,7 +17,7 @@ export class RoleGuard implements CanActivate {
   }
   private isAuthorised(route: ActivatedRouteSnapshot): boolean {
     let currentRole = sessionStorage.getItem('currentRole');
-    const expectedRoles = route.data.expectedRoles;
+    const expectedRoles = route.data['expectedRoles'];
     let roleMatches = 0;
     expectedRoles.forEach(element => {
       if (element == currentRole) {

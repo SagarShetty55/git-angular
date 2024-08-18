@@ -21,7 +21,9 @@ export class SearchComponent implements OnInit {
   get fc() { return this.searchForm.controls; }
 
   onSubmit() {
-    this.router.navigate(['/hotel-lists/'], { queryParams: { searchValue: JSON.stringify(this.searchForm.value.searchText)} });
+    let searchValue = this.searchForm.value.searchText;
+    this.router.navigate(['/hotel-lists/', searchValue]);
+    //this.router.navigate(['/hotel-lists/'], { queryParams: { searchValue: JSON.stringify(this.searchForm.value.searchText)} });
     // localStorage.setItem("searchText", searchData)
     // this.router.navigate(['/hotel-lists/'])
     // this.router.navigate(['/hotel-lists/'+ searchData])

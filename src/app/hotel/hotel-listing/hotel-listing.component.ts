@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { catchError, finalize } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from "@angular/router";
 import { Router } from "@angular/router";
 
@@ -15,7 +14,7 @@ declare var $: any;
 })
 export class HotelListingComponent implements OnInit {
 
-  constructor(private apiService: ApiService, private formBuilder: FormBuilder,
+  constructor(private apiService: ApiService,
     private route: ActivatedRoute, private router: Router
     ) { }
   public thumbnail: any;
@@ -23,23 +22,32 @@ export class HotelListingComponent implements OnInit {
   public hotel: any = [];
   public filteredString: any;
   public searchData: any;
+  public searchValue: any;
   firstCall: number = 1;
 
 
   ngOnInit(): void {
-    const routeparam = this.route.queryParams.subscribe(params => {
-      this.searchData = JSON.parse(params['searchValue']);
-    });
+    //this.searchValue = this.route.snapshot.params['searchValue'];
+    //  this.route.params.subscribe(params=>{
+    //     this.searchValue = parseInt(params.hotelId,)
+    // })
+
+     this.searchValue = this.route.snapshot.paramMap.get('searchValue');
+    console.log(this.searchValue);
+    // const routeparam = this.route.queryParams.subscribe(params => {
+    //   this.searchData = JSON.parse(params['searchValue']);
+    // });
+    // console.log(this.searchData);
    // this.searchData = localStorage.getItem("searchText");
     this.apiService
-      .getData(this.searchData)
-      .pipe(
-        catchError((error) => {
-          console.log('LOCAL ERROR: ', error);
-          return throwError(error);
-        }),
-        finalize(() => console.log('THE END'))
-      )
+      .getData(this.searchValue)
+      // .pipe(
+      //   catchError((error) => {
+      //     console.log('LOCAL ERROR: ', error);
+      //     return throwError(error);
+      //   }),
+      //   finalize(() => console.log('THE END'))
+      // )
       .subscribe(
         (data) => {
           this.hotelList = data;
@@ -50,17 +58,17 @@ export class HotelListingComponent implements OnInit {
       );
   }
 
-  onScroll(e) {
+  onScroll(e): void {
     console.log('scrolled!!', e);
     this.apiService
-    .getData(this.searchData)
-    .pipe(
-      catchError((error) => {
-        console.log('LOCAL ERROR: ', error);
-        return throwError(error);
-      }),
-      finalize(() => console.log('THE END'))
-    )
+    .getData(this.searchValue)
+    // .pipe(
+    //   catchError((error) => {
+    //     console.log('LOCAL ERROR: ', error);
+    //     return throwError(error);
+    //   }),
+    //   finalize(() => console.log('THE END'))
+    // )
     .subscribe(
       (data) => {
         this.hotelList = [...this.hotelList, ...data];
@@ -71,15 +79,15 @@ export class HotelListingComponent implements OnInit {
     );
   }
 
-  nextPage() {
-    this.apiService.getDataNextPage().subscribe((baseImage: any) => {
-      this.hotelList = baseImage.data;
-    })
-  }
-  trackByHotelId(index, item) {
+  // nextPage(): void {
+  //   this.apiService.getDataNextPage().subscribe((baseImage: any) => {
+  //     this.hotelList = baseImage.data;
+  //   })
+  // }
+  trackByHotelId( item): any {
     return item.hotelId;
   }
-  viewHotelDetails(hotelId: any){
+  viewHotelDetails(hotelId: any): void {
     this.router.navigate(['/hotel/',hotelId]);
 //    this.router.navigate(['/hotel-lists/hotel-details',hotelId]);
     //this.router.navigate(['/hotel-details'], { queryParams: { hotelId: JSON.stringify(hotelId)} });

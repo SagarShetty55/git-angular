@@ -9,11 +9,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthService } from './auth/auth.service';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,

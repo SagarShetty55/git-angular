@@ -9,7 +9,7 @@ import { RoleGuard } from './roles/role.guard';
 const routes: Routes = [
       { path: '', component: LoginComponent},
       { path: 'home', component: HomeComponent},
-      { path: 'hotel-lists', loadChildren: () => import('./hotel/hotel.module').then(m=>m.HotelModule) , canActivate:[AuthGuard, RoleGuard],
+      { path: 'hotel-lists/:searchValue', loadChildren: () => import('./hotel/hotel.module').then(m=>m.HotelModule) , canActivate:[AuthGuard, RoleGuard],
       data:{
         expectedRoles: ['Admin', 'Editor', 'Employee']
       }},
